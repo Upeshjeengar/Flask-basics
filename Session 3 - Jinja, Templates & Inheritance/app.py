@@ -2,13 +2,13 @@ from flask import Flask, render_template, url_for
 from employees import employees_data
 
 # create the flask app
-app = Flask(__name__)
+app = Flask(__name__) #templates is default folder where flask looks for content (you may change)
 
 # home page
 @app.route("/")
 @app.route("/home")
 def home():
-	return render_template("home.html", title="Home")
+	return render_template("home.html", title="Home")  #whenever you call {{title}} in home.html "Home" will be printed
 
 
 # about page
