@@ -23,7 +23,7 @@ class SignupForm(FlaskForm):
     )
     email = StringField(
         "Email",
-        validators=[DataRequired(), Email()]
+        validators=[DataRequired(), Email()] #Email() will check for valid email format 
     )
     gender = SelectField(
         "Gender",
